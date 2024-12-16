@@ -1,0 +1,217 @@
+/* CSS Utama */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+/* Hero Image */
+.hero {
+    position: relative;
+    width: 90%;
+    padding-top: 30px;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 35px; /* Jarak dari atas */
+    left: 5px; /* Jarak dari kiri */
+    color: rgb(0, 108, 197); /* Warna teks */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Varela Round", sans-serif;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Bayangan lebih halus */
+    letter-spacing: 1px; /* Ruang antar huruf untuk teks lebih jelas */
+}
+
+.health-text {
+    font-size: 18px;
+    color: #000000;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Section */
+.cards {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Card Row */
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-row a{
+    text-decoration: none;
+}
+
+.card-row a:hover {
+    text-decoration: none;
+}
+
+/* Card */
+.card {
+    width: 22%;
+    min-width: 150px;
+    max-width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none; /* Menghilangkan garis bawah secara default */
+    color: inherit; /* Menjaga warna teks sesuai elemen induknya */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for links on the card */
+.cards .card a {
+    display: block;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Warna teks mengikuti warna teks induk */
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Logo and Text Containers */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.text-container {
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.text-container p {
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+a .text-container p{
+    text-decoration: none;
+}
+
+/* News Section */
+.news-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.news-section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.news-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.news-card {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.news-card iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.news-card p {
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Scrollbar */
+.news-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.news-slider::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+        min-width: 80px;
+        padding: 12px;
+    }
+
+    .text-container p {
+        font-size: 0.9em;
+    }
+}

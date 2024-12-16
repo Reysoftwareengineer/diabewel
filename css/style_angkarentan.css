@@ -1,0 +1,132 @@
+/* CSS Utama */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    display: block; /* Ganti flex dengan block */
+}
+
+/* Card */
+.card {
+    width: 100%; /* Pastikan kartu mengambil seluruh lebar kontainer */
+    max-width: 350px;
+    margin: 20px auto; /* Tambahkan margin otomatis untuk membuat kartu rata tengah */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+}
+
+/* Image in the card */
+.card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid #007bff;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-out;
+}
+
+.card-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Text in the card */
+.card-text {
+    padding: 25px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Title styling */
+.card-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007bff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.card-text h2:hover {
+    color: #0056b3;
+}
+
+/* Paragraph styling */
+.card-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.card-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+    text-align: left;
+    color: #555;
+}
+
+.card-text ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%; /* Pastikan kartu mengambil seluruh lebar layar */
+    }
+
+    .card-text h2 {
+        font-size: 24px;
+    }
+
+    .card-text p,
+    .card-text ul li {
+        font-size: 14px;
+    }
+}
